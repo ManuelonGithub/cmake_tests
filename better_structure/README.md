@@ -3,7 +3,8 @@
 This is an example of a better file structure, and how it consequently allows you have a better cmake structure
 
 Project Has the following file structure:
-``` .
+``` 
+	.
 	|- app
 	|	|- include
 	|	|	|- other_src.h
