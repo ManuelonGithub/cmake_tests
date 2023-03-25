@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.12)
 
 # Gives the project a name - seems mandatory ?
 # Either way allows you to then use ${PROJECT_NAME} for the rest of the script
-project(test)
+project(simple_depend)
 
 # will add subdirectories  to the cmake execution "search path"
 # so if the subdirectory has a cmakelist file, it'll get processed
