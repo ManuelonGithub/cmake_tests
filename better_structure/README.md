@@ -12,17 +12,17 @@ Project Has the following file structure:
 	|	|- other_src.cpp
 	|	|- CMakeLists.txt
 	|
-    |- srcA
-    |   |- srcA.cpp
-    |   |- srcA.h
-    |   |- CMakeLists.txt
-    |
-    |- srcB
-    |   |- srcB.cpp
-    |   |- srcB.h
-    |   |- CMakeLists.txt
-    |
-    |- CMakeLists.txt
+	|- srcA
+	|	|- srcA.cpp
+	|	|- srcA.h
+	|	|- CMakeLists.txt
+	|
+	|- srcB
+	|	|- srcB.cpp
+	|	|- srcB.h
+	|	|- CMakeLists.txt
+	|
+	|- CMakeLists.txt
 ```
 Features of note:
 *	In app->CMakeLists, `target_include_directories(${PROJECT_NAME} PRIVATE include)` allows the .cpp files in app/ to include files in the "include" folder directly (`#include ".h"` vs. `#include "include/.h"`)
@@ -35,8 +35,8 @@ Features of note:
 
 Following steps are recommended (commands are done inside better_structure directory):
 ```
-    cmake -S . -B ./build
-    cmake --build build
+	cmake -S . -B ./build
+	cmake --build build
 
-    ./build/app/better_struct
+	./build/app/better_struct
 ```
