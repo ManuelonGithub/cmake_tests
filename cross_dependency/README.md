@@ -38,7 +38,7 @@ This is a hack for sure - a better solution is to have a more organized folder s
 
 ## Building and Running Scenario
 
-Following steps are recommended (commands are done inside simple_dependency directory):
+Following steps are recommended (commands are done inside cross_dependency directory):
 ```
     cmake -S . -B ./build
     cmake --build build
