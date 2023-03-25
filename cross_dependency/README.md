@@ -3,6 +3,7 @@
 This is another simple scenario where the application has two dependencies, srcA and srcB, and at the same time srcB depends on srcA.
 
 Project Has the following file structure:
+```
     .
     |- srcA
     |   |- srcA.cpp
@@ -16,15 +17,18 @@ Project Has the following file structure:
     |
     |- main.cpp
     |- CMakeLists.txt
+```
 
 But the following dependency graph:
+```
     srcA --- srcB --- main
      |_________________/
+```
 
 To accomplish this the addition of srcA as a library to the build must be done before srcB.
 This is done by have ordered add_subdirectory() declarations
 
-Inside the srcB CMakeLists file the srcA library dependency must be declared (via -> target_link_libraries(srcB PRIVATE srcA) )
+Inside the srcB CMakeLists file the srcA library dependency must be declared (via `target_link_libraries(srcB PRIVATE srcA)`)
 
 A bit of a hack is done inside srcB's cmake file in order to cleanly reference srcA in the code
 The line `target_include_directories(srcB PRIVATE ${PROJECT_SOURCE_DIR})` was added so inside the C++ code we can reference srcA "normally" -> `#include "srcA/srcA.h"`
